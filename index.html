@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Task Analyzer</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Smart Task Analyzer</h1>
+
+  <label>Strategy:</label>
+  <select id="strategy">
+    <option value="smart">Smart Balance</option>
+    <option value="fastest">Fastest Wins</option>
+    <option value="impact">High Impact</option>
+    <option value="deadline">Deadline Driven</option>
+  </select>
+
+  <h3>Tasks (JSON)</h3>
+  <textarea id="tasks" rows="10" cols="60">
+[
+  {
+    "title": "Fix login bug",
+    "due_date": "2025-11-30",
+    "estimated_hours": 3,
+    "importance": 8,
+    "dependencies": []
+  }
+]
+  </textarea>
+
+  <br><br>
+  <button onclick="analyze()">Analyze Tasks</button>
+
+  <h2>Results</h2>
+  <ul id="result"></ul>
+
+ <script src="./script.js"></script>
+</body>
+</html>
